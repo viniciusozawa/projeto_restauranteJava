@@ -8,6 +8,7 @@ package pacote_teste;
 import acoes.Cardapio;
 import acoes.Comanda;
 import acoes.Pagamento;
+import java.time.LocalTime;
 import java.util.Scanner;
 import pessoas.Clientes;
 import pessoas.Funcionamento;
@@ -23,22 +24,23 @@ public class TesteGeral {
     public static void main(String[] args) {
 
         //intanciando objetos
-        Gerente g1 = new Gerente();
+        LocalTime horaMinutoAtual = LocalTime.now();
         Scanner entrada = new Scanner(System.in);
         Cardapio cardapio = new Cardapio();
-        Clientes cliente = new Clientes();
-        Garcom garcom = new Garcom();
         Comanda comanda = new Comanda();
         Pagamento pagamento = new Pagamento();
-        Funcionamento funcionamento = new Funcionamento();
-        //parte do gerente
-
-        garcom.setId("10");
-        garcom.setNome("Otavio");
+        Funcionamento funcionamento = new Funcionamento(horaMinutoAtual);
         
-        g1.setNome("Roberto");
-        g1.setCpf("082.308.203-20");
-        g1.setId("admin");
+        
+        //Construtor Garcom
+        Garcom garcom = new Garcom("Otavio");
+        
+        //Construtor Gerente
+        Gerente g1 = new Gerente("Roberto" , "082.308.203-20");
+        
+        //Construtor Cliente
+         Clientes cliente = new Clientes("Vinicius","202.040.409-03","35 99999999","Cidade Paraguaçu-MG");
+        
         while (true) {
             System.out.println("Digite seu Id: ");
             String autenticador = entrada.nextLine();
@@ -71,10 +73,7 @@ public class TesteGeral {
 
         //Parte do cliente
       
-        cliente.setNome("Vinicius");
-        cliente.setCpf("202.040.409-03");
-        cliente.setContato("35 99999999");
-        cliente.setEndereco("Cidade Paraguaçu-MG");
+        
         
         funcionamento.exibirInfo();
         do {

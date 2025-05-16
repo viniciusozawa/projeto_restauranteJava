@@ -16,8 +16,17 @@ public class Gerente {
     private String nome;
     private String cpf;
     private String id;
-    private int indice = 0;
-
+    
+    public Gerente(){
+        this.id = "admin";
+    }
+    
+    public Gerente(String nome, String cpf ){
+        this();
+        this.nome = nome;
+        this.cpf = cpf;
+    }
+    
     public String getNome() {
         return nome;
     }
@@ -48,15 +57,15 @@ public class Gerente {
     
     
     public void cadastrarComida(String nome, double valor, Cardapio cardapio) {
-       
-        if (this.indice < 5) {
+        int indice = 0;
+        if (indice < 5) {
             for (int i = 0; i < 1; i++) {
                 
                 //cardapio.comida[this.indice] = nome;
-                cardapio.setComida(nome, this.indice);
+                cardapio.setComida(nome, indice);
                 //cardapio.valor[this.indice] = valor;
-                cardapio.setValor(valor, this.indice);
-                this.indice++;
+                cardapio.setValor(valor, indice);
+                indice++;
                 
             }
         } else{
