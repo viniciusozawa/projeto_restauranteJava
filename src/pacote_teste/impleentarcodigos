@@ -1,0 +1,30 @@
+Faz com q ele busque por meio do id qual e o cliente que possui 
+isso
+while (true) {
+            System.out.println("Digite seu ID: ");
+            String autenticador = entrada.nextLine();
+
+            Clientes clienteEncontrado = null;
+
+            // Procura o cliente com o ID informado
+            for (Clientes c : Clientes.listaClientes) {
+                if (c.getId().equals(autenticador)) {
+                    clienteEncontrado = c;
+                    break;
+                }
+            }
+
+            if (clienteEncontrado != null) {
+                System.out.println("Cliente autenticado com sucesso:");
+                clienteEncontrado.mostrarInfo();
+                break;
+            } else {
+                System.out.println("ID errado, tente novamente.");
+            }
+        }
+
+
+
+
+implementar um login para cadastramento de usuarios
+

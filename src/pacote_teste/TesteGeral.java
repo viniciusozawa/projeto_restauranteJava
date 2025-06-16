@@ -14,7 +14,7 @@ import pessoas.Clientes;
 import pessoas.Funcionamento;
 import pessoas.Garcom;
 import pessoas.Gerente;
-
+import pessoas.Usuarios;
 /**
  *
  * @author Usuario
@@ -36,15 +36,22 @@ public class TesteGeral {
         Garcom garcom = new Garcom("Otavio");
         
         //Construtor Gerente
-        Gerente g1 = new Gerente("Roberto" , "082.308.203-20");
+        Gerente g1 = new Gerente("Roberto" , "082.308.203-20","(35)99739-9448");
+        g1.mostrarInfo();
         
         //Construtor Cliente
-         Clientes cliente = new Clientes("Vinicius","202.040.409-03","35 99999999","Cidade Paraguaçu-MG");
-        
+        Clientes cliente = new Clientes("Vinicius","202.040.409-03","35 99999999","Cidade Paraguaçu-MG");
+        cliente.mostrarInfo();
+        Clientes cliente2 = new Clientes("Vinicius","202.040.409-03","35 99999999","Cidade Paraguaçu-MG");
+        cliente2.mostrarInfo();
+        Clientes cliente3 = new Clientes("Vinicius","202.040.409-03","35 99999999","Cidade Paraguaçu-MG");
+        cliente3.mostrarInfo();
+        Clientes cliente4 = new Clientes("Vinicius","202.040.409-03","35 99999999","Cidade Paraguaçu-MG");
+        cliente4.mostrarInfo();
         while (true) {
             System.out.println("Digite seu Id: ");
             String autenticador = entrada.nextLine();
-            if (autenticador.equals(g1.getId())) {
+            if (autenticador.equals(g1.getId()) && Clientes.class.) {
                 break;
             } else {
                 System.out.println("Id errado");

@@ -14,60 +14,32 @@ import java.util.Scanner;
  *
  * @author Otávio
  */
-public class Clientes {
+public class Clientes extends Usuarios{
 
-    private String nome;
-    private String contato;
-    private String cpf;
+    
     private String endereco;
     private int comida1, comida2;
-    
+    private static int n_id = 0;
 
-    public Clientes(String nome, String contato, String cpf, String endereco){
-        this.nome = nome;
-        this.contato = contato;
-        this.cpf = cpf;
-        this.endereco = endereco; 
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getContato() {
-        return contato;
-    }
-
-    public void setContato(String contato) {
-        this.contato = contato;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
+    public Clientes(String nome, String cpf, String telefone, String endereco) {
+        super(nome, cpf, telefone);
+        setN_id();
+        super.setId(Integer.toString(n_id));
         this.endereco = endereco;
     }
+    
+    
+    public static void setN_id() {
+        Clientes.n_id++;
+    }
+    
 
     public void chamarGarcom(Garcom garcom, Pagamento pagamento, Cardapio cardapio, Comanda comanda, int opcao) {
 
         switch (opcao) {
             case 1:
                 //fazer pedido
-                comanda.registrarNacomanda(this.nome, 1);
+                comanda.registrarNacomanda(super.getNome(), 1);
                 garcom.fazerPedido(cardapio, comanda, this.comida1, this.comida2);
                 break;
             case 2:

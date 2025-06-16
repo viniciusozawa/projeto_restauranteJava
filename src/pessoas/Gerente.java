@@ -11,53 +11,21 @@ import acoes.Cardapio;
  *
  * @author Otávio
  */
-public class Gerente {
-
-    private String nome;
-    private String cpf;
-    private String id;
-    
-    public Gerente(){
-        this.id = "admin";
-    }
-    
-    public Gerente(String nome, String cpf ){
-        this();
-        this.nome = nome;
-        this.cpf = cpf;
-    }
-    
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+public class Gerente extends Usuarios{
 
     
+    private int indice = 0;
+
+    public Gerente(String nome, String cpf, String telefone) {
+        super(nome, cpf, telefone);
+        super.setId("admin");
+    }
     
     
     
     
     public void cadastrarComida(String nome, double valor, Cardapio cardapio) {
-        int indice = 0;
+        
         if (indice < 5) {
             for (int i = 0; i < 1; i++) {
                 
