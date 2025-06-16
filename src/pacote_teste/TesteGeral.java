@@ -51,12 +51,12 @@ public class TesteGeral {
             }
         }
 
-        System.out.println("Bem vindo Gerente: " + g1.getNome());
+        System.out.println("\n\nBem vindo Gerente: " + g1.getNome());
         System.out.println("Deseja Utilizar Cardápio Automático: 1(sim) 2(não)");
         int opcao = entrada.nextInt();
         entrada.nextLine();
         if (opcao == 1) {
-            System.out.println("Cardápio Automático: ");
+            System.out.println("\n\nCardápio Automático: ");
             cardapio.cardapioAutomatico();
             cardapio.exibirCardapio();
         } else {
@@ -72,10 +72,7 @@ public class TesteGeral {
         }
 
         //Parte do cliente
-      
-        
-        
-        funcionamento.exibirInfo();
+
         do {
             System.out.println("\n\n----- MENU DO CLIENTE -----");
             System.out.println("1 - Ver Cardápio");

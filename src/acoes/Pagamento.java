@@ -23,7 +23,7 @@ public class Pagamento {
         for (int i = 0; i <= 1; i++) {
             this.valorTotal += comanda.getValorComida(i);
         }
-        System.out.println("Valor a Pagar Total: "+this.valorTotal);
+        System.out.println("\n\t\tValor a Pagar Total: "+this.valorTotal);
         return this.valorTotal;
     }
 
