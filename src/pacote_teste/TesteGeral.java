@@ -51,7 +51,7 @@ public class TesteGeral {
         while (true) {
             System.out.println("Digite seu Id: ");
             String autenticador = entrada.nextLine();
-            if (autenticador.equals(g1.getId()) && Clientes.class.) {
+            if (autenticador.equals(g1.getId())) {
                 break;
             } else {
                 System.out.println("Id errado");

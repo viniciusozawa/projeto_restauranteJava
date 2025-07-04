@@ -28,3 +28,7 @@ while (true) {
 
 implementar um login para cadastramento de usuarios
 
+estou pensando em separar a parte de cliente e de funcionario(garcom, gerente, cozinheiro)
+
+
+talvez em funcionario colocar como salario deles bonificacao a cada chamada dele 

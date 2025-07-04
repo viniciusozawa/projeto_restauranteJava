@@ -12,9 +12,11 @@ import java.util.Arrays;
  *
  * @author Otávio
  */
-public class Garcom {
+public class Garcom extends Funcionario{
     private String nome;
     private String id;
+    
+    
     
     public Garcom(){
         this.id = "Funcionário";
@@ -64,6 +66,11 @@ public class Garcom {
     //fazer o pedido
     //Levar a conta;
     //
+
+    @Override
+    public void comissao() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
     
     

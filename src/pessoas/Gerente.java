@@ -11,7 +11,7 @@ import acoes.Cardapio;
  *
  * @author Otávio
  */
-public class Gerente extends Usuarios{
+public class Gerente extends Funcionario{
 
     
     private int indice = 0;
@@ -19,6 +19,7 @@ public class Gerente extends Usuarios{
     public Gerente(String nome, String cpf, String telefone) {
         super(nome, cpf, telefone);
         super.setId("admin");
+        
     }
     
     
@@ -39,5 +40,10 @@ public class Gerente extends Usuarios{
         } else{
             System.out.println("Cardápio Cheio");
         }          
+    }
+
+    @Override
+    public void comissao() {
+       this.setSalario(this.getSalario() * 0.20);
     }
 }
