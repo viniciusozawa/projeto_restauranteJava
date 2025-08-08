@@ -16,11 +16,21 @@ public class Cardapio {
     private double[] valor = new double[5];
     
     public void setComida(String comida , int indice ) {
-        this.comida[indice] = comida;
+        try {
+           this.comida[indice] = comida; 
+        } catch (Exception e) {
+            System.out.println("Erro ao Cadastrar o nome da comida indice "+indice);
+        }
+        
     }
 
     public void setValor(double valor , int indice) {
-        this.valor[indice] = valor;
+        try {
+            this.valor[indice] = valor;
+        } catch (Exception e) {
+            System.out.println("Erro ao Cadastrar o nome da comida indice "+indice);
+        }
+        
     }
 
     public String getComida(int indice) {

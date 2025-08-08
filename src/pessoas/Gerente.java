@@ -21,8 +21,12 @@ public class Gerente extends Funcionario{
         super.setId("admin");
         
     }
-    
-    
+
+    @Override
+    public void exibirPerfil() {
+       System.out.println("Perfil");
+       System.out.println("Gerente: "+this.getNome()+"\nSalário: "+this.getSalario());
+    }
     
     
     public void cadastrarComida(String nome, double valor, Cardapio cardapio) {

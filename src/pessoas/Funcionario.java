@@ -13,11 +13,12 @@ public abstract class Funcionario extends Usuarios{
     
     public Funcionario(String nome, String cpf, String telefone) {
         super(nome, cpf, telefone);
+        this.salario = 0.0;
     }
     
     public Funcionario(String nome, String cpf, String telefone, double salario){
         super(nome, cpf, telefone);
-        this.salario = salario;
+        setSalario(salario);
     }
     
 
@@ -26,7 +27,12 @@ public abstract class Funcionario extends Usuarios{
     }
 
     public void setSalario(double salario) {
-        this.salario = salario;
+        if (salario >= 0) {
+            this.salario = salario;
+        }else{
+            System.out.println("Erro Salário não pode ser negativo");
+        }
+        
     }
     
     

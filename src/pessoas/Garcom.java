@@ -13,34 +13,20 @@ import java.util.Arrays;
  * @author Otávio
  */
 public class Garcom extends Funcionario{
-    private String nome;
-    private String id;
     
-    
-    
-    public Garcom(){
-        this.id = "Funcionário";
-    } 
-    
-    public Garcom(String nome){
-        this.nome = nome;
-    }
-    
-    public String getNome() {
-        return nome;
+
+    public Garcom(String nome, String cpf, String telefone) {
+        super(nome, cpf, telefone);
+        super.setId("Garcom");
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    @Override
+    public void exibirPerfil() {
+        System.out.println("Perfil");
+        System.out.println("Garçom: "+this.getNome()+"\nSalário: "+this.getSalario());
     }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+    
+    
     
     
     
@@ -69,7 +55,7 @@ public class Garcom extends Funcionario{
 
     @Override
     public void comissao() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.salario = this.salario + (this.salario * 0.10);
     }
     
     

@@ -27,6 +27,13 @@ public class Clientes extends Usuarios{
         super.setId(Integer.toString(n_id));
         this.endereco = endereco;
     }
+
+    @Override
+    public void exibirPerfil() {
+       System.out.println("Perfil");
+       System.out.println("Usuário: "+this.getNome()+"\nNúmero ID: "+this.getId());
+    }
+    
     
     
     public static void setN_id() {
